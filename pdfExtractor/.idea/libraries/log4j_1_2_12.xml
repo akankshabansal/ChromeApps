@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="log4j-1.2.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/pdfbox-1.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/fontbox-1.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

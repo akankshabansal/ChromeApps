@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_pdfextractor" default="compile.module.pdfextractor">
+  <dirname property="module.pdfextractor.basedir" file="${ant.file.module_pdfextractor}"/>
+  
+  <property name="module.jdk.home.pdfextractor" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.pdfextractor" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.pdfextractor" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.pdfextractor" value="${compiler.args}"/>
+  
+  <property name="pdfextractor.output.dir" value="${module.pdfextractor.basedir}/out/production/pdfExtractor"/>
+  <property name="pdfextractor.testoutput.dir" value="${module.pdfextractor.basedir}/out/test/pdfExtractor"/>
+  
+  <path id="pdfextractor.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="pdfextractor.module.production.classpath">
+    <path refid="${module.jdk.classpath.pdfextractor}"/>
+    <pathelement location="${basedir}/pdfbox-1.8.2.jar"/>
+  </path>
+  
+  <path id="pdfextractor.runtime.production.module.classpath">
+    <pathelement location="${pdfextractor.output.dir}"/>
+    <pathelement location="${basedir}/pdfbox-1.8.2.jar"/>
+  </path>
+  
+  <path id="pdfextractor.module.classpath">
+    <path refid="${module.jdk.classpath.pdfextractor}"/>
+    <pathelement location="${pdfextractor.output.dir}"/>
+    <pathelement location="${basedir}/pdfbox-1.8.2.jar"/>
+  </path>
+  
+  <path id="pdfextractor.runtime.module.classpath">
+    <pathelement location="${pdfextractor.testoutput.dir}"/>
+    <pathelement location="${pdfextractor.output.dir}"/>
+    <pathelement location="${basedir}/pdfbox-1.8.2.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.pdfextractor">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.pdfextractor">
+    <patternset refid="excluded.from.module.pdfextractor"/>
+  </patternset>
+  
+  <path id="pdfextractor.module.sourcepath">
+    <dirset dir="${module.pdfextractor.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.pdfextractor" depends="compile.module.pdfextractor.production,compile.module.pdfextractor.tests" description="Compile module pdfExtractor"/>
+  
+  <target name="compile.module.pdfextractor.production" depends="register.custom.compilers" description="Compile module pdfExtractor; production classes">
+    <mkdir dir="${pdfextractor.output.dir}"/>
+    <javac2 destdir="${pdfextractor.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.pdfextractor}/javac">
+      <compilerarg line="${compiler.args.pdfextractor}"/>
+      <bootclasspath refid="pdfextractor.module.bootclasspath"/>
+      <classpath refid="pdfextractor.module.production.classpath"/>
+      <src refid="pdfextractor.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.pdfextractor"/>
+    </javac2>
+    
+    <copy todir="${pdfextractor.output.dir}">
+      <fileset dir="${module.pdfextractor.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.pdfextractor.tests" depends="register.custom.compilers,compile.module.pdfextractor.production" description="compile module pdfExtractor; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.pdfextractor" description="cleanup module">
+    <delete dir="${pdfextractor.output.dir}"/>
+    <delete dir="${pdfextractor.testoutput.dir}"/>
+  </target>
+</project>

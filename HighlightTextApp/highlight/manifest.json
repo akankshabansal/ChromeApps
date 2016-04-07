@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Highlight text",
+	"description": "This extension highlight text",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"css": ["annotator.min.css"],
+			"js": ["jquery-1.7.min.js", "annotator-full.min.js", "annotator.offline.min.js", "highlight.js"]
+		}
+	]
+}

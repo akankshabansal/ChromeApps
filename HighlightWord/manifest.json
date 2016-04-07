@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    
+    "name": "EnhancedSearch",
+    "description": "This extension takes the search from a browser to the next level. of passage retrieval",
+    "version": "1.0",
+    
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "background.html"
+    },
+    "permissions": [
+                    ""
+                    ]
+}

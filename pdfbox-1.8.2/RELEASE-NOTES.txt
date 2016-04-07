@@ -1,0 +1,80 @@
+Release Notes -- Apache PDFBox -- Version 1.8.2
+
+Introduction
+------------
+
+The Apache PDFBox library is an open source Java tool for working with PDF documents.
+
+This is an incremental bugfix release based on the earlier 1.8.1 release. It 
+contains a couple of fixes and small improvements.
+
+For more details on all fixes included in this release, please refer to the following
+issues on the PDFBox issue tracker at https://issues.apache.org/jira/browse/PDFBOX.
+
+Bug Fixes
+
+[PDFBOX-1093] - Copy Page from one Document to another: Page Content Stream Linked 
+                to Original Document
+[PDFBOX-1561] - PDFBox throws exception with PDFTextStripper.getText
+[PDFBOX-1580] - Oracle JVM crashes because of embedded fonts.
+[PDFBOX-1583] - wasted work in PDDocument.addSignature(...)
+[PDFBOX-1586] - IndexOutOfBoundsException when saving a document (at random)
+[PDFBOX-1592] - Addition of 'null' in COSString when extracting form fields
+[PDFBOX-1599] - ConvertToImage gets ClassCastException with Checkboxes in PDFForm
+[PDFBOX-1601] - java.lang.IllegalArgumentException: Width (4032) and height (-2880) 
+                cannot be <= 0
+[PDFBOX-1602] - Erroneous values for TextPosition get{X,Y}[DirAdj]
+[PDFBOX-1603] - Regression in PDDocument.loadNonSeq ?
+[PDFBOX-1605] - PDPropBuildDataDict: use COSName instead of COSString as name value
+[PDFBOX-1609] - EXCEPTION_ACCESS_VIOLATION with PDF file and image conversion
+[PDFBOX-1610] - Corrupted result pdf when overlay one document with another one
+[PDFBOX-1611] - Avoid IndexOutOfBoundsException when extracting the font matrix of 
+                a Type1 font
+[PDFBOX-1612] - Avoid ArrayOutOfBoundsException when creating a PDPixelMap using an
+                indexed colorspace
+[PDFBOX-1615] - Color map not correctly copied when PDF file is split
+
+Improvement
+
+[PDFBOX-1293] - PDFImageWriter should use logging instead of System.out.println
+[PDFBOX-1581] - Add PDDocument.save(File) and PDDocument.loadNonSeq(InputStream, ...)
+
+New Feature
+
+[PDFBOX-1565] - Add support for Lab color spaces
+
+
+Release Contents
+----------------
+
+This release consists of a single source archive packaged as a zip file.
+The archive can be unpacked with the jar tool from your JDK installation.
+See the README.txt file for instructions on how to build this release.
+
+The source archive is accompanied by SHA1 and MD5 checksums and a PGP
+signature that you can use to verify the authenticity of your download.
+The public key used for the PGP signature can be found at
+https://svn.apache.org/repos/asf/pdfbox/KEYS.
+
+About Apache PDFBox
+-------------------
+
+Apache PDFBox is an open source Java library for working with PDF documents.
+This project allows creation of new PDF documents, manipulation of existing
+documents and the ability to extract content from documents. Apache PDFBox
+also includes several command line utilities. Apache PDFBox is published
+under the Apache License, Version 2.0.
+
+For more information, visit http://pdfbox.apache.org/
+
+About The Apache Software Foundation
+------------------------------------
+
+Established in 1999, The Apache Software Foundation provides organizational,
+legal, and financial support for more than 100 freely-available,
+collaboratively-developed Open Source projects. The pragmatic Apache License
+enables individual and commercial users to easily deploy Apache software;
+the Foundation's intellectual property framework limits the legal exposure
+of its 2,500+ contributors.
+
+For more information, visit http://www.apache.org/

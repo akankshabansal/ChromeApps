@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/ant" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/examples" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/fontbox" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/jempbox" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/lucene" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/parent" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/pdfbox" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/preflight" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/preflight-app" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/war" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/xmpbox" charset="ISO-8859-1" />
+  </component>
+</project>
+
